@@ -101,10 +101,6 @@ class Interfaz {
 
 }
 
-
-
-
-
 // EventListener
 const formulario = document.getElementById('cotizar-seguro');
 
