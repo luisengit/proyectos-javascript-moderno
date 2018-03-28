@@ -33,13 +33,11 @@ function cargarNombres(e) {
 
     // Crear Fetch
     fetch(url)
-        .then(function(res) {
-            return res.json();
-        })
-        .then(function(data) {
+        .then(res => res.json())
+        .then(data => {
             let html = `<h2>Nombre Generados: </h2>`;
             html += `<ul class="lista">`;
-            data.forEach(function(nombre) {
+            data.forEach(nombre => {
                 html += `
                     <li>${nombre.name}</li>        
                 `;
@@ -47,7 +45,5 @@ function cargarNombres(e) {
             html += `</ul>`;
             document.querySelector('#resultado').innerHTML = html;
         })
-        .catch(function(error) {
-            console.log(error);
-        })
+        .catch(error => console.log(error));
 }
